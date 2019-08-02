@@ -15,7 +15,7 @@ RUN set -eux; \
 		/gluster-web; \
 	cd /gluster-web; \
 	bower install --allow-root; \
-	gem install tzinfo-data; \
+	echo "gem 'tzinfo-data'" >> Gemfile; \
 	bundle install; \
 	bin/rake db:migrate; \
 	apt-get clean; \
